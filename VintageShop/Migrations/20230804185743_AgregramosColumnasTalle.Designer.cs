@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VintageShop.Datos;
 
@@ -10,9 +11,11 @@ using VintageShop.Datos;
 namespace VintageShop.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230804185743_AgregramosColumnasTalle")]
+    partial class AgregramosColumnasTalle
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,7 +51,7 @@ namespace VintageShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Zapatos", (string)null);
+                    b.ToTable("Zapatos");
                 });
 #pragma warning restore 612, 618
         }
